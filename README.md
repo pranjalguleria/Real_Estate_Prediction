@@ -3,3 +3,7 @@ A wesbite called PriceWise, which will predict the prices of the houses in Benga
 
 ## This is the link of website (front-end)
 https://glitch.com/~real-estate-prediction
+
+ Login with details written below :
+ Email : 2002563.cse.cec@cgc.edu.in
+ Password: 2002563

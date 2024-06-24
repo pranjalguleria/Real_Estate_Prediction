@@ -1,0 +1,144 @@
+<!DOCTYPE>
+<html>
+  <head>
+    <title>Evaluate your home</title>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+    .container{
+      display:flex;
+      justify-content: space-between;
+      align-items: c
+    }
+    .header{
+      overflow: hidden;
+  background-color: #111;
+  padding: none;
+      color :white;
+      order:1;
+    }
+    .logo {
+      order: 2;
+      background-color: #111;
+      }
+    label {
+  font:
+    1rem 'Fira Sans',
+    sans-serif;
+   }
+
+   input {
+       margin: 0.4rem;
+    }
+    
+    input[type=text], select {
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+    
+    input[type=submit] {
+  width: 30%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin:  8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+     
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+   div {
+  border-radius: 0px;
+  background-color: #f2f2f2;
+  padding: none;
+}
+    </style>
+  </head>
+  <body>
+    
+    <div classs="container">
+       <div class ="logo">
+      <center>
+      <img src = "https://cdn.glitch.global/aa88381f-2047-4ac5-aa2d-b8e1642263ab/PriceWise.png?v=1713252035285" alt = "Website Logo"  width = "200px"  height="150px" />
+      </center>
+      </div>
+     <div class = "header">
+        <h3><center>Predicitve Insights</center></h3>
+      </div>
+  </div>
+   
+    <br>
+    <h4><center><b>
+      Get your Real Estate Price Estimate : Fill Out the Form Below !</b></center>
+    </h4>
+    <br>
+     <center><form action="/pdata" method ="POST">
+    <div style="width:87%">
+      
+    <label for ="locations"><h5>Select Location :</h5></label>
+    <select id="locationSelect" name="locationSelect">
+      <option value="" disabled selected>Select an option</option>
+      {% for location in locations %}
+      <option value="{{location}}">{{location}}</option>
+      {% endfor %}
+    </select>
+      
+  <br><br>
+      
+      <label for = "sqft"><h5>SquareFeet :</h5></label>
+    <div>
+  <input style="width:90%" type="range" id="sq_ft" name="sq_ft" min="30" max="30000" oninput="updateValue(this.value)">
+      <output id="output">slide</output>
+  <label for="volume">Square Feet</label>
+      
+       <script>
+     function updateValue(val) {
+       document.getElementById('output').value = val;
+     } </script>
+</div>
+     
+      
+   <label for = "bedrooms"><h5>Select Number of Bedrooms needed : </h5></label>
+    <select id="bedrooms" name="bedrooms">
+      <option value="" disabled selected>Select an option</option>
+      {% for i in range(1,7) : %}
+      <option> {{i}}</option>
+      {% endfor %}
+    </select>
+      
+      <br><br>
+     
+    <label for = "bathrooms"><h5>Select Number of Bathrooms needed : </h5></label>
+     <select id="bathrooms" name="bathrooms">
+       <option value="" disabled selected>Select an option</option>
+      {% for i in range(1,7) : %}
+      <option> {{i}}</option>
+      {% endfor %}
+    </select>
+      
+      <br><br>
+     
+  
+  <center><input type="submit" value="Submit"></center>
+      
+    </div>
+     </form></center>
+    
+  </body>
+</html>

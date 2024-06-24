@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+  
+  <head>
+    
+    <title>About this website</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+    body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: $gray;
+  display: flex;
+      justify- content: center;
+      align-logo : center;
+  height: 100vh;
+}
+    .header{
+      position:fixed;
+      top : 0;
+      width: 100%;
+      padding: none;
+      z-index: 1000;
+     background-color: #000;
+      color :#fff;
+      padding: 20px;
+      
+    }
+    .logo {
+      overflow: hidden;
+      background-color: #000;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      }
+    
+    .logo a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding:none;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.logo a:hover {
+  background: #ddd;
+  color: black;
+}
+
+.main {
+  padding: 16px;
+  margin-top: 30px;
+  height: 1500px;}
+    
+    * {
+  box-sizing: border-box;
+  &::before, &::after {
+    box-sizing: border-box;
+  }
+ }
+
+.container {
+  margin-top : 150px;
+  padding: 1px;
+  width: 70rem;
+}
+
+.accordion {
+  .accordion-item {
+    border-bottom: 0.7px solid ;
+    color : #7D7F7F;
+    button[aria-expanded='true'] {
+      border-bottom: 1px solid;
+    }
+    .accordion-item:hover{
+      color: #61F9F8; }
+    .accordion-item :active{
+      color : #2F6EC7
+  }
+  button {
+    position: relative;
+    display: block;
+    text-align: left;
+    width: 100%;
+    padding: 20px 20px;
+    color: $text;
+    font-size: 2.10rem;
+    font-weight: 400;
+    border: none;
+    background: none;
+    outline: none;
+    &:hover, &:focus {
+      cursor: pointer;
+      color: #2F39C7;
+      &::after {
+        cursor: pointer;
+        color: #2F39C7;
+        border: 1px solid #2F39C7;
+      }
+    }
+    .accordion-title {
+      padding: 1em 1.5em 1em 0;
+    }
+    .icon {
+      display: inline-block;
+      position: absolute;
+      top: 18px;
+      right: 0;
+      width: 20px;
+      height: 20px;
+      border: 0.7px solid;
+      border-radius: 22px;
+      &::before {
+        display: block;
+        position: absolute;
+        content: '';
+        top: 9px;
+        left: 5px;
+        width: 10px;
+        height: 2px;
+        background: currentColor;
+      }
+      &::after {
+        display: block;
+        position: absolute;
+        content: '';
+        top: 5px;
+        left: 9px;
+        width: 2px;
+        height: 10px;
+        background: currentColor;
+      }
+    }
+  }
+  button[aria-expanded='true'] {
+    color: $blue;
+    .icon {
+      &::after {
+        width: 0;
+      }
+    }
+    + .accordion-content {
+      opacity: 1;
+      max-height: 15em;
+      transition: all 200ms linear;
+      will-change: opacity, max-height;
+      font-size: 20px;
+    }
+  }
+  .accordion-content {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 200ms linear, max-height 200ms linear;
+    will-change: opacity, max-height;
+    
+    p {
+      font-size: 1.2rem;
+      font-weight: 300;
+      margin: 2em 0;
+    }
+  }
+}
+    </style>
+  
+    
+  </head>
+  
+  <body>
+    
+    <header>
+      
+     <div class ="logo">
+    <center>
+  <img src = "https://cdn.glitch.global/aa88381f-2047-4ac5-aa2d-b8e1642263ab/PriceWise.png?v=1713252035285" alt = "Website Logo" width = "200px"  height="150px"/>
+   </center>
+      </div> 
+      
+      </header> 
+    
+<div class="container">
+  
+    <h2>Frequently Asked Questions</h2>
+  
+  <div class="accordion">
+    
+    <div class="accordion-item">
+      <button id="accordion-button-1" aria-expanded="false"><span class="accordion-title">Why do I need this website ?</span><span class="icon" aria-hidden="true"></span></button>
+      <div class="accordion-content">
+        <p>This website for real estate prediction can provide valuable insights and data analysis for buyers, sellers, and investors. It can help users make informed decisions by offering predictions on property values, market trends, and potential future developments in the real estate market. Additionally, it can serve as a platform to access comprehensive information about properties, neighborhoods, and relevant financial metrics, all in one convenient location.</p>
+      </div>
+    </div>
+    
+    <div class="accordion-item">
+      <button id="accordion-button-2" aria-expanded="false"><span class="accordion-title">How long will it take to sell my property ?</span><span class="icon" aria-hidden="true"></span></button>
+      <div class="accordion-content">
+        <p>Typically, the time it takes to sell a property can vary based on several factors, including location, market conditions, property type, pricing strategy, and the overall demand for real estate in the area. Our website utilizes advanced data analysis and market research to provide tailored insights into your specific property and its selling timeline. By considering various variables and historical trends, we can offer a reliable estimation of the time it may take to sell your property, helping you make informed decisions and optimize your selling strategy.</p>
+      </div>
+    </div>
+    
+    <div class="accordion-item">
+      <button id="accordion-button-3" aria-expanded="false"><span class="accordion-title">Do I need a home inspection ?</span><span class="icon" aria-hidden="true"></span></button>
+      <div class="accordion-content">
+        <p>Yes, a home inspection is highly recommended when considering purchasing a property. It provides a comprehensive assessment of the home's condition, identifying any potential issues or areas needing repair. A thorough inspection can uncover hidden problems that may not be apparent during a casual viewing, helping you make an informed decision and potentially saving you from costly repairs down the line. Ultimately, a home inspection provides peace of mind and ensures you're making a wise investment in your future property.</p>
+      </div>
+    </div>
+    
+    <div class="accordion-item">
+      <button id="accordion-button-4" aria-expanded="false"><span class="accordion-title">Do I need a down payment to buy a house ?</span><span class="icon" aria-hidden="true"></span></button>
+      <div class="accordion-content">
+        <p>Typically, purchasing a house involves a down payment, which is a percentage of the home's purchase price paid upfront. The amount required can vary based on factors such as loan type, lender requirements, and the buyer's financial situation. While some loan programs offer low or no down payment options, having a down payment can often lead to more favorable loan terms and lower monthly payments. Our website can provide personalized insights into your specific situation, helping you understand the down payment requirements and explore financing options tailored to your needs and goals.</p>
+      </div>
+    </div>
+    
+    <div class="accordion-item">
+      <button id="accordion-button-5" aria-expanded="false"><span class="accordion-title">What is the selling/buying process like?</span><span class="icon" aria-hidden="true"></span></button>
+      <div class="accordion-content">
+        <p>Typically, the process involves several key steps such as property listing, marketing, negotiations, inspections, financing, and closing. Our website serves as a comprehensive resource to guide you through each stage of the process, offering expert insights, tools, and resources to streamline your experience. From understanding market trends to connecting with trusted professionals, we're here to support you every step of the way and ensure a smooth and successful transaction.</p>
+      </div>
+    </div>
+    
+  </div>
+   
+</div>
+  
+    <script>
+    const items = document.querySelectorAll(".accordion button");
+
+function toggleAccordion() {
+  const itemToggle = this.getAttribute('aria-expanded');
+  
+  for (i = 0; i < items.length; i++) {
+    items[i].setAttribute('aria-expanded', 'false');
+  }
+  
+  if (itemToggle == 'false') {
+    this.setAttribute('aria-expanded', 'true');
+  }
+}
+
+items.forEach(item => item.addEventListener('click', toggleAccordion));</script>
+  </body>
+</html>

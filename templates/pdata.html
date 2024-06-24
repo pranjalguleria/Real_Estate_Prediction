@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Predicted Price</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      display: flex;
+      align-items : center;
+      height: 65vh;
+    }
+    .logo {
+      overflow: hidden;
+      background-color: #000;
+      position: fixed;
+      top: 0;
+      width: 100%;
+    }
+    .table-container{
+      margin: 0 auto;
+      width: 80%;
+    }
+    table { 
+      margin-left: auto; 
+      margin-right: auto; 
+      margin-top: 200px;
+      font-size: 20px; 
+      height: 100%;
+      width: 80%;
+      table-layout: fixed; 
+    } 
+    td { 
+      border: 1.5px solid black; 
+      text-align: center; 
+      padding: 10px; 
+    } 
+    tr:nth-child(even) { 
+      background-color: #E7E8E9; 
+    } 
+    h1 { 
+      color: white; 
+    } 
+  </style>
+</head>
+<body>
+  <div class="logo">
+    <center>
+      <img src="https://cdn.glitch.global/aa88381f-2047-4ac5-aa2d-b8e1642263ab/PriceWise.png?v=1713252035285" alt="Website Logo" width="200px" height="200px"/>
+    </center>
+  </div> 
+    
+  <center>
+    <div class="table-container">
+      <table style="position: center"> 
+        <tr style="color:white; background-color:black;"> 
+          <td>Location</td> 
+          <td>Bedrooms</td> 
+          <td>Bathrooms</td>
+          <td>SqFt</td>
+          <td>Predicted Price (in lakhs)</td>
+          <!-- Add debug statements placeholders -->
+          <td>Input Features</td>
+          <td>Debug Prediction</td>
+        </tr> 
+        <tr> 
+          <td>{{loc}}</td> 
+          <td>{{bhk}}</td> 
+          <td>{{bath}}</td> 
+          <td>{{sqft}}</td> 
+          <td>{{pprice}}</td> 
+          <!-- Display debug statements -->
+          <td>{{input_features}}</td>
+          <td>{{debug_prediction}}</td>
+        </tr> 
+      </table> 
+    </div>
+  </center> 
+</body>
+</html>

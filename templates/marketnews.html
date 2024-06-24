@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  
+  <head>
+    <title>Market Analysis</title>
+  </head>
+  
+  <body>
+    <center>
+    <h2>
+      <u>
+      Market Analysis</u>
+    </h2></center>
+    
+    <div id="news-container">
+        {% for article in articles %}
+        <div class="article">
+            <h2>{{ article.title }}</h2>
+            <p>{{ article.description }}</p>
+            <a href="{{ article.url }}" target="_blank">Read more</a>
+        </div>
+        {% endfor %}
+    </div>
+    
+  </body>
+</html>
